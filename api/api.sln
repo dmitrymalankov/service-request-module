@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "srm-rest-service", "srm-rest-service\srm-rest-service.csproj", "{CE1652C1-3F88-40B6-A86B-ED42E4B09301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "srm-repositories", "srm-repositories\srm-repositories.csproj", "{CDD6A768-077A-436D-9153-DE8341B4EDE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE1652C1-3F88-40B6-A86B-ED42E4B09301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE1652C1-3F88-40B6-A86B-ED42E4B09301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE1652C1-3F88-40B6-A86B-ED42E4B09301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE1652C1-3F88-40B6-A86B-ED42E4B09301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD6A768-077A-436D-9153-DE8341B4EDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD6A768-077A-436D-9153-DE8341B4EDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD6A768-077A-436D-9153-DE8341B4EDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD6A768-077A-436D-9153-DE8341B4EDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
