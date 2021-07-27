@@ -61,7 +61,7 @@ namespace srm_tests
 
             Given = new GivenStructure(serviceRepository);
             When = new WhenStructure(serviceRequestController, data);
-            Then = new ThenStructure(serviceRepository, data);
+            Then = new ThenStructure(data);
         }
 
         // ReSharper disable once InconsistentNaming
@@ -92,7 +92,7 @@ namespace srm_tests
 
         public void PostRequest()
         {
-            _sut.Post(new ServiceRequest());
+            _testData.ActionResult = _sut.Post(new ServiceRequest());
         }
 
         public void GetAllRequest()
@@ -108,19 +108,16 @@ namespace srm_tests
     
     public class ThenStructure
     {
-        private readonly Mock<IServiceRepository> _serviceRepository;
         private readonly TestData _testData;
 
-        public ThenStructure(
-            Mock<IServiceRepository> serviceRepository,
-            TestData testData)
+        public ThenStructure(TestData testData)
         {
-            _serviceRepository = serviceRepository;
             _testData = testData;
         }
 
         public void NewServiceRequestCreated()
         {
+            Assert.IsType<CreatedAtActionResult>(_testData.ActionResult.Result);
         }
 
         public void NoContentReturned()
