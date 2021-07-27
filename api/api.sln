@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "srm-rest-service", "srm-res
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "srm-repositories", "srm-repositories\srm-repositories.csproj", "{CDD6A768-077A-436D-9153-DE8341B4EDE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "srm-tests", "srm-tests\srm-tests.csproj", "{5EA02CA7-A341-4CE0-BFFE-5448749D6FA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{CDD6A768-077A-436D-9153-DE8341B4EDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDD6A768-077A-436D-9153-DE8341B4EDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDD6A768-077A-436D-9153-DE8341B4EDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA02CA7-A341-4CE0-BFFE-5448749D6FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA02CA7-A341-4CE0-BFFE-5448749D6FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA02CA7-A341-4CE0-BFFE-5448749D6FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA02CA7-A341-4CE0-BFFE-5448749D6FA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
