@@ -111,7 +111,9 @@ namespace srm_repositories
 
                 if (serviceRequestCompleted)
                 {
-                    
+                    // We might need to send email/notification to a user here in accordance with the following:
+                    // `Send notification (e.g., email, text) to the user when Service request is closed.'
+                    // but it is not clear where this Email should be taken from, could it be a part of ServiceRequest.cs?
                 }
             });
         }
