@@ -51,7 +51,7 @@ namespace srm_tests
         public ServiceRequestControllerTests()
         {
             var logger = new Mock<ILogger<ServiceRequestController>>();
-            var serviceRepository = new Mock<IServiceRepository>();
+            var serviceRepository = new Mock<IRepository<ServiceRequest>>();
             
             var serviceRequestController = new ServiceRequestController(
                 logger.Object,
@@ -145,9 +145,9 @@ namespace srm_tests
     
     public class GivenStructure
     {
-        private readonly Mock<IServiceRepository> _serviceRepository;
+        private readonly Mock<IRepository<ServiceRequest>> _serviceRepository;
 
-        public GivenStructure(Mock<IServiceRepository> serviceRepository)
+        public GivenStructure(Mock<IRepository<ServiceRequest>> serviceRepository)
         {
             _serviceRepository = serviceRepository;
         }

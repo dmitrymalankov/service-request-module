@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using srm_repositories;
+using srm_repositories.Models;
 
 namespace srm_rest_service
 {
@@ -27,6 +22,8 @@ namespace srm_rest_service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            // 
+            services.AddSingleton<IRepository<ServiceRequest>, ServiceRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "srm_rest_service", Version = "v1"});
