@@ -63,7 +63,7 @@ namespace srm_rest_service.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError($"Method 'GetById' failed reading data by `{id}`", e);
+                _logger.LogError($"Method '{nameof(Get)}' failed reading data by `{id}`", e);
                 return InternalServerError();
             }
 
@@ -105,7 +105,7 @@ namespace srm_rest_service.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError($"Method 'Put' failed modifying service request by id:`{id}`", e);
+                _logger.LogError($"Method '{nameof(Put)}' failed modifying service request by id:`{id}`", e);
                 return InternalServerError();
             }
             
@@ -133,7 +133,7 @@ namespace srm_rest_service.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError("Method 'Post' failed creating new service request.", e);
+                _logger.LogError($"Method '{nameof(Post)}' failed creating new service request.", e);
                 return InternalServerError();
             }
             
@@ -166,7 +166,7 @@ namespace srm_rest_service.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError("Method 'Post' failed creating new service request.", e);
+                _logger.LogError($"Method '{nameof(Delete)}' failed deleting service request '{id}'.", e);
                 return InternalServerError();
             }
             
