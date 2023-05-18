@@ -107,7 +107,7 @@ namespace srm_repositories
                 serviceRequest.CurrentStatus = CurrentStatus.Complete;
                 
                 // assumption: we soft delete items, in case we need to actually hard delete them - TryRemove() should be used instead.
-                var serviceRequestCompleted = ServiceRequests.TryUpdate(id, serviceRequest, new ServiceRequest {Id = id});
+                var serviceRequestCompleted = ServiceRequests.TryUpdate(id, serviceRequest, new ServiceRequest {Id = id, CurrentStatus = CurrentStatus.Canceled});
 
                 if (serviceRequestCompleted)
                 {
